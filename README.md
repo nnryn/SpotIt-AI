@@ -1,2 +1,3 @@
 # SpotIt-AI
-Skin Disease Classifier
+## Skin Disease Classifier
+### A DAS project
