@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotIt AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">SpotIt AI</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Classifier</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>SpotIt AI</h1>
+        <p>An AI-powered tool to assist in identifying common skin conditions in rural areas.</p>
+        <p class="disclaimer"><strong>Disclaimer:</strong> This tool is for informational and screening purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for any health concerns.</p>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload Skin Image</h2>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="predictButton" disabled>Analyze Image</button>
+            <p id="statusText">Please upload an image.</p>
+        </section>
+
+        <section class="results-section hidden" id="resultsSection">
+            <div class="image-preview-container">
+                <img id="imagePreview" src="#" alt="Image Preview" style="display: none;">
+            </div>
+            <div id="predictionResults">
+                <h3>Prediction:</h3>
+                <div id="label-container"></div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>How It Works</h2>
+            <p>Upload a clear image of the affected skin area. Our AI model, trained on various dermatological images, will analyze it and provide a probable classification. This process happens entirely in your browser for privacy.</p>
+            <p>For a definitive diagnosis and treatment plan, please consult a local health worker or connect with a dermatologist via telemedicine.</p>
+        </section>
+
+        <section class="education-section">
+            <h2>Common Skin Conditions</h2>
+            <p>Visit our <a href="#education-content">educational resources</a> section to learn more about prevalent skin diseases and their management.</p>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; SpotIt AI. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
