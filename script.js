@@ -63,11 +63,8 @@ predictButton.addEventListener('click', async function() {
 
     try {
         const prediction = await model.predict(imagePreview);
-        
         resultsSection.classList.remove('hidden'); 
-
         prediction.sort((a, b) => b.probability - a.probability);
-
         const numResultsToDisplay = Math.min(3, maxPredictions); 
 
         for (let i = 0; i < numResultsToDisplay; i++) {
@@ -77,8 +74,8 @@ predictButton.addEventListener('click', async function() {
             div.innerHTML = classPrediction;
             labelContainer.appendChild(div);
         }
-
         statusText.innerText = "Analysis complete. See top predictions below.";
+        
     } catch (error) {
         statusText.innerText = "Error during prediction. Please try again.";
         console.error("Error during prediction:", error);
